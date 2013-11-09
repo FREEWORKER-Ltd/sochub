@@ -1,3 +1,3 @@
-# meteor-boilerplate
+# sochub
 
-See our [documentation](http://github.differential.io/meteor-boilerplate/)
+A social media hub, bringing your media back under your control.
