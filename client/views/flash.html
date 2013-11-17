@@ -1,0 +1,8 @@
+<template name="flash">
+  {{#if flash}}
+    <div id="flash" class="alert alert-{{flash.type}} fade-in">
+      <button type="button" class="close" aria-hidden="true">x</button>
+      {{flash.message}}
+    </div>
+  {{/if}}
+</template>

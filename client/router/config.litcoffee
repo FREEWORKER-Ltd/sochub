@@ -13,8 +13,17 @@ while the sidebar layout includes the side, offcanvas menu.
           to: 'header'
         sidebar:
           to: 'sidebar'
+        flash:
+          to: 'flash'
         footer:
           to: 'footer'
+
+Using a global "unload" hook to unset the flash:
+    
+    Router.unload ->
+      Session.set('flash', null)
+
+Feeds route is the "main" one.
 
     Router.map ->
       @route 'feed',
@@ -22,3 +31,15 @@ while the sidebar layout includes the side, offcanvas menu.
 
       @route 'dashboard',
         path: '/dashboard'
+
+Routes to handle login, registration, and other account managment tasks:
+
+      @route 'login_form',
+        path: '/login'
+
+      @route 'register_form',
+        path: '/register'
+
+      @route 'reset_password',
+        path: '/reset-password'
+
