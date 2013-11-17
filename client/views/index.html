@@ -1,6 +1,8 @@
 <head>
-  <title>My New Meteor App</title>
+  <title>SocHub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <template name="layout">
@@ -9,6 +11,20 @@
   <![endif]-->
 
   {{yield 'header'}}
-  {{yield}}
-  {{yield 'footer'}}
+  <div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+      <div class="col-xs-12 col-sm-9">
+        <p class="pull-right visible-xs">
+          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Nav</button>
+        </p>
+        <div class="row">
+          {{yield}}
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        {{yield 'sidebar'}}
+      </div>
+    </div>
+    {{yield 'footer'}}
+  </div>
 </template>
